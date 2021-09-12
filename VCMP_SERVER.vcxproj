@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CFBBBDE6-7A1A-4935-99D3-ACEA91027913}</ProjectGuid>
+    <RootNamespace>VCMP_SERVER</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\..\..\..\..\..\GTA Vice City</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="config.cpp" />
+    <ClCompile Include="gamemode\generic.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="netgame.cpp" />
+    <ClCompile Include="netrpc.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="playerpool.cpp" />
+    <ClCompile Include="raknet\AES128.cpp" />
+    <ClCompile Include="raknet\AsynchronousFileIO.cpp" />
+    <ClCompile Include="raknet\BitStream.cpp" />
+    <ClCompile Include="raknet\CheckSum.cpp" />
+    <ClCompile Include="raknet\DataBlockEncryptor.cpp" />
+    <ClCompile Include="raknet\DistributedNetworkObject.cpp" />
+    <ClCompile Include="raknet\DistributedNetworkObjectManager.cpp" />
+    <ClCompile Include="raknet\DistributedNetworkObjectStub.cpp" />
+    <ClCompile Include="raknet\EncodeClassName.cpp" />
+    <ClCompile Include="raknet\ExtendedOverlappedPool.cpp" />
+    <ClCompile Include="raknet\GetTime.cpp" />
+    <ClCompile Include="raknet\HuffmanEncodingTree.cpp" />
+    <ClCompile Include="raknet\HuffmanEncodingTreeFactory.cpp" />
+    <ClCompile Include="raknet\InternalPacketPool.cpp" />
+    <ClCompile Include="raknet\Itoa.cpp" />
+    <ClCompile Include="raknet\NetworkObject.cpp" />
+    <ClCompile Include="raknet\NetworkTypes.cpp" />
+    <ClCompile Include="raknet\PacketPool.cpp" />
+    <ClCompile Include="raknet\RakClient.cpp" />
+    <ClCompile Include="raknet\RakMemoryOverride.cpp" />
+    <ClCompile Include="raknet\RakNetStatistics.cpp" />
+    <ClCompile Include="raknet\RakNetworkFactory.cpp" />
+    <ClCompile Include="raknet\RakPeer.cpp" />
+    <ClCompile Include="raknet\RakServer.cpp" />
+    <ClCompile Include="raknet\RakSleep.cpp" />
+    <ClCompile Include="raknet\RakThread.cpp" />
+    <ClCompile Include="raknet\Rand.cpp" />
+    <ClCompile Include="raknet\ReliabilityLayer.cpp" />
+    <ClCompile Include="raknet\RPCNode.cpp" />
+    <ClCompile Include="raknet\SHA1.cpp" />
+    <ClCompile Include="raknet\SimpleMutex.cpp" />
+    <ClCompile Include="raknet\SocketLayer.cpp" />
+    <ClCompile Include="raknet\StringCompressor.cpp" />
+    <ClCompile Include="raknet\TCPInterface.cpp" />
+    <ClCompile Include="raknet\WSAStartupSingleton.cpp" />
+    <ClCompile Include="rcon.cpp" />
+    <ClCompile Include="vehicle.cpp" />
+    <ClCompile Include="vehiclepool.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config.h" />
+    <ClInclude Include="gamemode\generic.h" />
+    <ClInclude Include="gamemode\genericrpc.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="netgame.h" />
+    <ClInclude Include="netrpc.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="playerpool.h" />
+    <ClInclude Include="raknet\AES128.h" />
+    <ClInclude Include="raknet\ArrayList.h" />
+    <ClInclude Include="raknet\AsynchronousFileIO.h" />
+    <ClInclude Include="raknet\BigTypes.h" />
+    <ClInclude Include="raknet\BinarySearchTree.h" />
+    <ClInclude Include="raknet\BitStream.h" />
+    <ClInclude Include="raknet\CheckSum.h" />
+    <ClInclude Include="raknet\ClientContextStruct.h" />
+    <ClInclude Include="raknet\DataBlockEncryptor.h" />
+    <ClInclude Include="raknet\DistributedNetworkObject.h" />
+    <ClInclude Include="raknet\DistributedNetworkObjectHeader.h" />
+    <ClInclude Include="raknet\DistributedNetworkObjectManager.h" />
+    <ClInclude Include="raknet\DistributedNetworkObjectStub.h" />
+    <ClInclude Include="raknet\DS_List.h" />
+    <ClInclude Include="raknet\DS_Queue.h" />
+    <ClInclude Include="raknet\EncodeClassName.h" />
+    <ClInclude Include="raknet\ExtendedOverlappedPool.h" />
+    <ClInclude Include="raknet\GetTime.h" />
+    <ClInclude Include="raknet\HuffmanEncodingTree.h" />
+    <ClInclude Include="raknet\HuffmanEncodingTreeFactory.h" />
+    <ClInclude Include="raknet\HuffmanEncodingTreeNode.h" />
+    <ClInclude Include="raknet\InternalPacket.h" />
+    <ClInclude Include="raknet\InternalPacketPool.h" />
+    <ClInclude Include="raknet\Itoa.h" />
+    <ClInclude Include="raknet\LinkedList.h" />
+    <ClInclude Include="raknet\MTUSize.h" />
+    <ClInclude Include="raknet\Multiplayer.h" />
+    <ClInclude Include="raknet\NetworkObject.h" />
+    <ClInclude Include="raknet\NetworkTypes.h" />
+    <ClInclude Include="raknet\PacketEnumerations.h" />
+    <ClInclude Include="raknet\PacketPool.h" />
+    <ClInclude Include="raknet\PacketPriority.h" />
+    <ClInclude Include="raknet\Queue.h" />
+    <ClInclude Include="raknet\QueueLinkedList.h" />
+    <ClInclude Include="raknet\RakClient.h" />
+    <ClInclude Include="raknet\RakClientInterface.h" />
+    <ClInclude Include="raknet\RakMemoryOverride.h" />
+    <ClInclude Include="raknet\RakNetStatistics.h" />
+    <ClInclude Include="raknet\RakNetworkFactory.h" />
+    <ClInclude Include="raknet\RakPeer.h" />
+    <ClInclude Include="raknet\RakPeerInterface.h" />
+    <ClInclude Include="raknet\RakServer.h" />
+    <ClInclude Include="raknet\RakServerInterface.h" />
+    <ClInclude Include="raknet\RakSleep.h" />
+    <ClInclude Include="raknet\RakThread.h" />
+    <ClInclude Include="raknet\Rand.h" />
+    <ClInclude Include="raknet\ReliabilityLayer.h" />
+    <ClInclude Include="raknet\RPCNode.h" />
+    <ClInclude Include="raknet\RSACrypt.h" />
+    <ClInclude Include="raknet\SHA1.h" />
+    <ClInclude Include="raknet\SimpleMutex.h" />
+    <ClInclude Include="raknet\SingleProducerConsumer.h" />
+    <ClInclude Include="raknet\SocketLayer.h" />
+    <ClInclude Include="raknet\StringCompressor.h" />
+    <ClInclude Include="raknet\TCPInterface.h" />
+    <ClInclude Include="raknet\Types.h" />
+    <ClInclude Include="raknet\WSAStartupSingleton.h" />
+    <ClInclude Include="rcon.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="system.h" />
+    <ClInclude Include="vehicle.h" />
+    <ClInclude Include="vehiclepool.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
